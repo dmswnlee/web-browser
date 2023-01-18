@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./size.js"></script>
+    <title>window_size</title>
+    <style>
+        h2{
+            display: inline-block;
+            background-color: plum;
+            padding: 10px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2></h2>
+    <script>
+        
+        function handleSize() {
+            const h2 = document.querySelector('h2');
+            console.log(h2);
+            h2.innerText = 
+            `window.screen : ${window.screen.width}, ${window.screen.height}
+            window.outer: ${window.outerWidth}, ${window.outerHeight}
+            window.inner: ${window.innerWidth}, ${window.innerHeight}
+            documentElementClientWidth: ${document.documentElement.clientWidth}, ${document.documentElement.clientHeight}`
+        };
+
+        window.addEventListener('resize', handleSize)
+        handleSize();
+    </script>
+</body>
+</html>
