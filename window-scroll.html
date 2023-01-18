@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scroll</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: beige;
+            margin-bottom: 5px;
+            border-radius: 5px;
+        }
+        .box{
+            background-color: coral;
+        }
+        aside{
+            position: fixed;
+            top: 10px;
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div class="box"></div>
+    <div></div>
+    <div></div>
+    <aside>
+        <button class="scroll-by">Scroll by 100px(y)</button>
+        <button class="scroll-to">Scroll to 100px(y)</button>
+        <button class="scroll-into">Scroll into box</button>
+    </aside>
+    <script>
+        const box = document.querySelector('.box')
+        const scrollBy = document.querySelector('.scroll-by')
+        const scrollTo = document.querySelector('.scroll-to')
+        const scrollInto = document.querySelector('.scroll-into')
+
+        scrollBy.addEventListener('click', () => {
+            window.scrollBy(0,100);
+        });
+
+        scrollTo.addEventListener('click', () => {
+            window.scrollTo(0,100)
+        });
+
+        scrollInto.addEventListener('click', () => {
+            box.scrollIntoView({behavior: "smooth", block: "center"})
+        })
+    </script>
+</body>
+</html>
