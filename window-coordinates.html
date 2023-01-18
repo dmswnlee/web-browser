@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>coordinates</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: beige;
+            margin-bottom: 5px;
+            border-radius: 5px;
+        }
+        .box{
+            background-color: coral;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div class="box"></div>
+    <div></div>
+    <div></div>
+    <script>
+        const box = document.querySelector('.box');
+
+        function boxClick(e) {
+            const domRect = box.getBoundingClientRect();
+            console.log(domRect);
+            console.log(`client: ${e.clientX}, ${e.clientY}`);
+            console.log(`page: ${e.pageX}, ${e.pageY}`);
+        }
+
+        box.addEventListener('click', boxClick)
+    </script>
+</body>
+</html>
