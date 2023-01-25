@@ -1,0 +1,101 @@
+body{
+    font-family: 'Noto Sans', sans-serif;
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: #bbc3dd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul, li{
+    list-style: none;
+}
+
+button{
+    border: none;
+    background-color: transparent;
+}
+
+i{
+    color: #ffffff;
+}
+
+.list{
+    position: relative;
+    width: 500px;
+    height: 600px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #bbbbdd;
+    border-radius: 10px 10px 0 0;
+}
+
+h1{
+    font-size: 25px;
+    color: #ffffff;
+}
+
+.list-category{
+    height: 100%;
+    background-color: #F4F4F4;
+}
+
+.list-item{
+    padding: 10px 20px;
+}
+
+.list-item li{
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.list-item button{
+    transition: all 500ms ease-in-out;
+}
+
+.list-item button:hover{
+    transform: scale(1.2);
+}
+
+.list-item button i{
+    color: #333333;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+footer{
+    width: 100%;
+}
+
+.list-form{
+    display: flex;
+    flex-direction: column;
+}
+
+.list-input{
+    outline: none;
+    border: none;  
+    padding: 10px;
+}
+
+.add-btn{
+    font-size: 30px;
+    background-color: #bbbbdd;
+    padding: 10px;
+    border-radius: 0 0 10px 10px;
+    cursor: pointer;
+}
