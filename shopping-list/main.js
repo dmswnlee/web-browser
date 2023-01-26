@@ -35,7 +35,12 @@ function painList(newList) {
 function handleSubmit(e){
     e.preventDefault();
     const newList = listInput.value;
+    if(newList === '') {
+        listInput.focus();
+        return;
+    }
     listInput.value = '';
+    listInput.focus();
     const newListObj = {
         text: newList,
         id: Date.now(),
