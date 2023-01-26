@@ -1,7 +1,6 @@
 const listItem = document.querySelector('.list-item');
 const listForm = document.querySelector('.list-form');
 const listInput = document.querySelector('.list-input');
-const addBtn = document.querySelector('.add-btn');
 
 const LISTS = "Lists";
 
@@ -30,7 +29,6 @@ function painList(newList) {
     li.appendChild(button);
     listItem.appendChild(li);
 }
-
 
 function handleSubmit(e){
     e.preventDefault();
